@@ -1,0 +1,54 @@
+.sidebar {
+	width: 25%;
+	float: left;
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			h3 {
+				font-family: 'Oswald', sans-serif;
+				font-size: 16px;
+				font-weight: normal;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+			}
+			a {
+				text-decoration: none;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 14px;
+				color: #555555;
+			}
+			.rpwwt-post-date {
+				font-size: 12px;
+				color: #999;
+			}
+			.cat-item {
+				font-size: 14px;
+				font-family: 'Source Sans Pro', sans-serif;
+				padding: 10px 0;
+				letter-spacing: 1px;
+				color: #555555;
+				border-bottom: 1px solid #ebebeb;
+			}
+		}
+	}
+	.widget_archive a {
+		font-size: 14px;
+		font-family: 'Source Sans Pro', sans-serif;
+		padding: 10px 0;
+		letter-spacing: 1px;
+		color: #555555;
+		border-bottom: 1px solid #ebebeb;
+		display: block;
+	}
+	.tagcloud a {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 14px;
+		color: #555555;
+		letter-spacing: 1px;
+		padding: 5px;
+		margin: 3px;
+		background-color: #f2f2f2;
+	}
+}

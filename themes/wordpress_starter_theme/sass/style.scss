@@ -1,0 +1,468 @@
+/*!
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'flickity';
+@import 'header';
+@import 'footer';
+/*
+Fonts
+*/
+@import 'https://fonts.googleapis.com/css?family=Great+Vibes|Kaushan+Script|Oswald:400,700|Source+Sans+Pro:300,400,400i,600,700';
+
+
+//text variables
+$logotext: 'Kaushan Script', cursive;
+$basefont: 'Source Sans Pro', sans-serif;
+$headingfont: 'Oswald', sans-serif;
+$fancytext: 'Great Vibes', cursive;
+$mainorange: #f2ad32;
+
+//responsive breakpoint variables
+
+$screenM: 995px;
+$screenTab: 815px;
+$mobileL: 575px;
+$mobileM: 375px;
+$mobileS: 320px;
+
+
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+	font-family: $basefont;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.archive .container .content h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: $mainorange;
+	text-transform: uppercase;
+}
+
+.full {
+	width: 100%;
+}
+
+// Front Page Styling
+
+//Cards
+.descriptCards {
+	background-image: url('./images/backgroundTexture.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 15vh 0;
+	.cardContainer {
+		display: flex;
+		@media screen and (max-width: $screenM) {
+			display: block;
+		}
+		div:nth-child(2) {
+			position: relative;
+			bottom: 50px;
+			@media screen and (max-width: $screenM) {
+				bottom: 0;
+			}
+		}
+		.card {
+		text-align: center;
+		margin: 0 35px;
+		width: calc(33% - 70px);
+		@media screen and (max-width: $screenM) {
+			width: 65%;
+			margin: 70px auto;
+		}
+			&:hover .contents {
+			opacity: 1;
+			transition: all 0.3s;
+			}
+		}
+		h4 {
+			font-size: 45px;
+			font-family: $fancytext;
+			font-weight: normal;
+			color: $mainorange;
+			margin: 0;
+		}
+		h3 {
+			font-family: $headingfont;
+			color: #333333;
+			font-size: 33px;
+			letter-spacing: 2px;
+			font-weight: normal;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		p {
+			font-family: $basefont;
+			font-size: 14px;
+			letter-spacing: 1.5px;
+			color: #666666;
+			line-height: 2;
+			padding: 0 35px; 
+		}
+		a {
+			text-decoration: none;
+			font-family: $headingfont;
+			color: $mainorange;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: normal;
+			line-height: 5;
+		}	
+	}
+	.contents {
+		padding: 110px 0;
+		background-color: #FFF;
+		opacity: 0;
+	}
+}
+
+//menu preview
+
+.menuContain {
+	background: linear-gradient(rgba(47, 47, 47, 0.7), rgba(47, 47, 47, 0.3));
+	padding: 0;
+	padding-bottom: 125px;
+	padding-top: 30px;
+	.heading {
+		font-size: 45px;
+		font-family: $fancytext;
+		color: $mainorange;
+		text-align: center;
+		font-weight: normal;
+		margin: 0;
+	}
+	.subHeading {
+		font-size: 40px;
+		font-family: $headingfont;
+		font-weight: normal;
+		letter-spacing: 2px;
+		text-align: center;
+		color: #FFF;
+		margin: 10px 0;
+		text-transform: uppercase;
+	}
+	.linkCenter {
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $headingfont;
+		color: #FFF;
+		font-size: 14px;
+		margin-top: 20px;
+		a {
+			text-decoration: none;
+			color: #FFF;
+			border: 1.5px solid #FFF;
+			padding: 10px 50px;
+			position: relative;
+			top: 10px;
+			&:hover {
+				background-color: #000;
+				transition: all 0.3s;
+			}
+		}
+	}
+}
+.padContainer {
+	padding: 20px 0;
+}
+.previewContainer, .lunchContainer, .dinnerContainer{
+	display: flex;
+	justify-content: space-around;
+	@media screen and (max-width: $screenTab) {
+		flex-direction: column;
+	}
+	.menuColumn {
+		.itemFlex {
+			display: flex;
+			h4 {
+				min-width: 50%;
+				margin: 0;
+				font-family: $headingfont;
+				font-size: 18px;
+				font-weight: normal;
+				color: #FFF;
+				@media screen and (max-width: $screenM) {
+					font-size: 14px;
+				}
+			}
+			p {
+				min-width: 15%;
+				margin: 0;
+				font-family: $basefont;
+				color: $mainorange;
+				font-size: 25px;
+				font-weight: bold;
+				@media screen and (max-width: $screenM) {
+					font-size: 20px;
+					position: relative;
+					right: 40px;
+					bottom: 2px;
+				}
+			}
+			i {
+				font-size: 20px;
+			}
+			.dashed {
+				padding: 0 95px;
+				position: relative;
+				top: 20px;
+				right: 30px;
+				min-width: 35%;	
+				height: 1px;
+				border-bottom: 1px dashed #FFF;
+				@media screen and (max-width: $screenM) {
+					min-width: 25%;
+					right: 50px;
+					top: 12px;
+				}
+			}
+		}
+		.description {
+			margin: 0;
+			font-size: 14px;
+			font-family: $basefont;
+			font-weight: normal;
+			color: #FFF;
+		}
+		@media screen and (max-width: $screenTab) {
+			display: inline-block;
+			width: 320px;
+			margin: 0 auto;	
+		}
+	}
+}
+.menuMain .content {
+	float: none;
+	width: 100%;
+}
+
+.dinnerMenu .menuContain {
+	@extend .mainTexture;
+	.subHeading {
+		color: #333;
+	}
+	.padContainer {
+		h4 {
+			color: #333;
+		}
+		.dashed {
+			border-color: #333;
+		}
+		.description {
+			color: #333;
+		}
+	}
+}
+
+.drinksContainer {
+	display: flex;
+	flex-direction: column;
+	.padContainer {
+		margin: 0 auto;
+	}
+	.itemFlex {
+		display: flex;
+		h4 {
+			min-width: 50%;
+			margin: 0;
+			font-family: $headingfont;
+			font-size: 18px;
+			font-weight: normal;
+			color: #FFF;
+		}
+		p {
+			min-width: 15%;
+			margin: 0;
+			font-family: $basefont;
+			color: $mainorange;
+			font-size: 25px;
+			font-weight: bold;
+		}
+		i {
+			font-size: 20px;
+		}
+		.dashed {
+			padding: 0 95px;
+			position: relative;
+			top: 20px;
+			right: 30px;
+			min-width: 35%;	
+			height: 1px;
+			border-bottom: 1px dashed #FFF;
+		}
+	}
+	.description {
+		margin: 0;
+		font-size: 14px;
+		font-family: $basefont;
+		font-weight: normal;
+		color: #FFF;
+	}
+}
+.drinksMenu .menuContain {
+	padding-top: 125px;
+}
+//Bottom Call to Action
+
+.title {
+	font-size: 45px;
+	font-family: $fancytext;
+	color: $mainorange;
+	text-align: center;
+	font-weight: normal;
+	margin: 0;
+}
+
+.subTitle {
+	font-family: $headingfont;
+	color: #333333;
+	font-size: 33px;
+	letter-spacing: 2px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	padding: 15px 0;
+}
+
+.descriptiveText {
+	font-family: $basefont;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	color: #666666;
+	line-height: 2;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.mainTexture {
+	background-image: url('./images/backgroundTexture.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px 0;
+	.callToCard {
+		background-color: rgba(255,255,255, 0.50);
+		max-width: 65%;
+		margin: 0 auto;
+		padding: 60px 50px;
+		.readBlog {
+			text-align: center;
+			a {
+				text-decoration: none;
+				font-family: $headingfont;
+				color: $mainorange;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-weight: normal;
+				line-height: 5;
+				text-align: center;
+			}
+		}
+	}
+}
+
+//General Blog styling
+
+.entry-title {
+	font-family: $headingfont;
+	font-size: 33px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	text-transform: capitalize;
+	margin: 0;
+	padding: 10px 0;
+	a {
+		text-decoration: none;
+		color: #333333;
+
+	}
+}
+
+.entry-meta {  
+	.meta-prep, .meta-set, a{
+		font-size: 12px;
+		font-weight: normal;
+		color: #acacac;
+		text-decoration: none;
+	}
+}
+
+#nav-below {
+	display: flex;
+	justify-content: space-between;
+	a {
+		font-size: 14px; 
+		color: #333;
+		text-decoration: none;
+	}
+}
+
+.entry-content {
+	font-family: 'Source Sans Pro', sans-serif;
+	p {
+		font-size: 14px;
+		font-weight: normal;
+		color: #666666;
+	}
+	h1, h2, h3, h4 {
+		font-weight: normal;
+		font-size: 36px;
+		color: #333333;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	.more-link {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: bold;
+		letter-spacing: 2px;
+		color: $mainorange;
+		text-decoration: none;
+		text-transform: capitalize;
+	}
+}
+
+.blogMain {
+	padding: 50px 0;
+}

@@ -1,0 +1,47 @@
+ul.menu {
+	margin: auto 0;
+	padding: 0;
+	li {
+		font-family: 'Oswald', sans-serif;
+		display: inline;
+		margin-right: 10px;
+		font-size: 14px;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		a {
+			padding: 10px;
+			color: white;
+			text-decoration: none;
+			&:hover {
+				color: #e4a431;
+			}
+			.active {
+				color: #e4a431;
+			}
+		}
+	}
+}
+
+.menuTransparent {
+	margin: auto 0;
+		padding: 0;
+		li {
+			font-family: 'Oswald', sans-serif;
+			display: inline;
+			margin-right: 10px;
+			font-size: 14px;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			a {
+				padding: 10px;
+				color: black;
+				text-decoration: none;
+				&:hover {
+					color: #e4a431;
+				}
+				.menu-item-29 {
+					color: #e4a431;
+				}
+			}
+		}
+}

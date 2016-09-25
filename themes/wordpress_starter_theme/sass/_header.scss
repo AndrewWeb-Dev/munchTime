@@ -1,0 +1,154 @@
+//Hero Header
+
+.headerHome {
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	.headerContain {
+		text-align: center;
+		height: 100%;
+		background: linear-gradient(rgba(47, 47, 47, 0.7), rgba(47, 47, 47, 0.3));
+	}
+	.header-flex {
+		padding: 30px 12px;
+		display: flex;
+		justify-content: space-between;
+		.fa-bars {
+			display: none;
+		}
+		@media screen and (max-width: 815px) {
+			flex-direction: column;
+		}
+		@media screen and (max-width: 575px) {
+			flex-direction: row;
+			#menu-primary-menu {
+				display: none;
+				position: fixed;
+				right: 0;
+				top: 0;
+				background-color: #000;
+				height: 100vh;
+				width: 50%;
+				z-index: 1000;
+				li {
+					display: block;
+					font-size: 20px;
+					text-align: right;
+					padding: 20px 0;
+				}
+			}
+			.fa-bars {
+				display: block;
+				font-size: 30px;
+				color: #f2ad32;
+				margin: auto 0;
+			}
+		}
+		h1 {
+			margin: 0;
+			font-family: 'Kaushan Script', cursive;
+			font-size: 40px;
+			@media screen and (max-width: 815px) {
+				padding: 10px 0;
+			}
+			a {
+				color: #FFF;
+				text-decoration: none;
+			}
+		}
+	}
+	h2 {
+		text-align: center;
+		font-size: 70px;
+		font-family: 'Great Vibes', cursive;
+		font-weight: normal;
+		color: #f2ad32;
+		margin: 35px 0 0 0;
+	}
+
+	.hero-item {
+		width: 100%;
+		padding: 30px;
+		h4 {
+			font-size: 70px;
+			color: #FFF;
+			font-family: 'Oswald', sans-serif;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: normal;
+			letter-spacing: 2px;
+			margin: 10px 0;
+			@media screen and (max-width: 815px) {
+				font-size: 55px;
+			}
+		}
+	}
+	.callToAction {
+		position: relative;
+		top: 70px;
+		margin-top: 70px;
+		padding: 10px 55px;
+		text-decoration: none;
+		border-style: none;
+		background-color: #f2ad32;
+		color: #FFF;
+		font-family: 'Oswald', sans-serif;
+		font-weight: normal;
+		transition: all 0.3s;
+		&:hover {
+			background-color: #000;
+		}
+	}
+	.previous, .next {
+		display: none;
+	}
+}
+
+//Transparent Header 
+
+.transparent {
+	background: transparent;
+}
+
+.headerTransparent {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+	h1 {
+		margin: 0;
+		font-family: 'Kaushan Script', cursive;
+		font-size: 40px;
+		a {
+			color: #FFF;
+			text-decoration: none;
+		}
+	}
+	.menu-item a {
+		color: #FFF;
+	}
+}
+
+.white {
+	background-color: white;
+	border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+//white header 
+
+.headerWhite {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+	h1 {
+		margin: 0;
+		font-family: 'Kaushan Script', cursive;
+		font-size: 40px;
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+	.menu-item a {
+		color: #000;
+	}
+}
