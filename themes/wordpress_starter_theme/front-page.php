@@ -20,6 +20,7 @@ get_header('home');  ?>
 		                <p><?php the_sub_field('card_text'); ?></p>
 		                <a href="<?php the_sub_field('hyperlink_url'); ?>"><?php the_sub_field('hyperlink_text'); ?></a>
 	                </div>
+              	  	<i class="fa fa-chevron-right animated infinite pulse" aria-hidden="true"></i>
 	              </div> <!--End of card item -->
             <?php
             }

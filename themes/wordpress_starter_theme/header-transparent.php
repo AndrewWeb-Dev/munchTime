@@ -13,7 +13,6 @@
 
 <body <?php body_class(); ?>>
 
-<?php $herobackground = get_field('background_image'); ?>
 
 <header class="transparent">
     <div class="container">
@@ -28,6 +27,8 @@
           'theme_location' => 'primary',
           'menu_class' => 'menuTransparent'
         )); ?>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
     </div> <!-- /.container -->
 </header><!--/.header-->

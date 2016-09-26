@@ -24,11 +24,11 @@
             <?php bloginfo( 'name' ); ?><span style="color: #f2ad32">..</span>
           </a>
         </h1>
-          <?php wp_nav_menu( array(
-            'container' => false,
-            'theme_location' => 'primary'
-          )); ?>
-          <i class="fa fa-times" aria-hidden="true"></i>
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'primary'
+        )); ?>
+        <i class="fa fa-times" aria-hidden="true"></i>
         <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
       <div class="welcomeFlexer">
