@@ -15,8 +15,13 @@
 		.welcomeContent {
 			margin: auto 0;
 			width: 100%;
-			position: relative;
-			top: 10vh;
+			@media screen and (min-width: 575px) {
+				position: relative;
+				top: 10vh;
+			}
+			@media screen and (max-width: 360px) {
+				top: 0;
+			}
 		}
 	}
 	.header-flex {
@@ -53,7 +58,7 @@
 				z-index: 1000;
 				li {
 					display: block;
-					font-size: 20px;
+					font-size: 15px;
 					text-align: right;
 					padding: 20px 0;
 					border-bottom: 2px solid #FFF;
@@ -65,10 +70,13 @@
 				color: #f2ad32;
 				margin: auto 0;
 				position: fixed;
-				top: 6%;
+				top: 8%;
 				right: 0;
 				margin-right: 10px;
 				z-index: 900;
+				@media screen and (max-width: 360px) {
+					top: 7.5%;
+				}
 			}
 		}
 		h1 {
@@ -77,6 +85,9 @@
 			font-size: 40px;
 			@media screen and (max-width: 815px) {
 				padding: 10px 0;
+			}
+			@media screen and (max-width: 360px) {
+				font-size: 30px;
 			}
 			a {
 				color: #FFF;
@@ -91,6 +102,10 @@
 		font-weight: normal;
 		color: #f2ad32;
 		margin: 35px 0 0 0;
+		@media screen and (max-width: 360px) {
+			margin: 0;
+			font-size: 50px;
+		}
 	}
 
 	.hero-item {
