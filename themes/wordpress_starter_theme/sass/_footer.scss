@@ -7,6 +7,13 @@ footer {
 		list-style-type: none;
 		margin: 0;
 		padding: 55px 0;
+		@media screen and (max-width: 575px) {
+			flex-direction: column;
+			li {
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
 		h3 {
 			font-family: 'Oswald', sans-serif;
 			text-transform: uppercase;

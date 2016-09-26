@@ -24,28 +24,33 @@
             <?php bloginfo( 'name' ); ?><span style="color: #f2ad32">..</span>
           </a>
         </h1>
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'theme_location' => 'primary'
-        )); ?>
+          <?php wp_nav_menu( array(
+            'container' => false,
+            'theme_location' => 'primary'
+          )); ?>
+          <i class="fa fa-times" aria-hidden="true"></i>
         <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
-      <h2><?php the_field('welcome'); ?></h2>
-      <div class="slider" data-flickity>
-        <?php 
-          if(have_rows('hero_slider')){
-            while(have_rows('hero_slider')){
-              the_row();
-              ?>
-              <div class='hero-item'>
-                <h4><?php the_sub_field('slider_text'); ?></h4>
-              </div> <!--End of Hero Item -->
-            <?php
-            }
-          }
-        ?>
-      </div><!--End of Slider -->
-      <a class="callToAction" href="http://localhost/andrew_thompson_week7/menu/"><?php the_field('button_text');?></a>
+      <div class="welcomeFlexer">
+        <div class="welcomeContent">
+          <h2><?php the_field('welcome'); ?></h2>
+          <div class="slider" data-flickity>
+            <?php 
+              if(have_rows('hero_slider')){
+                while(have_rows('hero_slider')){
+                  the_row();
+                  ?>
+                  <div class='hero-item'>
+                    <h4><?php the_sub_field('slider_text'); ?></h4>
+                  </div> <!--End of Hero Item -->
+                <?php
+                }
+              }
+            ?>
+          </div><!--End of Slider -->
+          <a class="callToAction" href="http://localhost/andrew_thompson_week7/menu/"><?php the_field('button_text');?></a>
+        </div><!--/.wContent-->
+      </div><!--/.wFlexer-->
     </div> <!-- /.container -->
   </div>
 </header><!--/.header-->
