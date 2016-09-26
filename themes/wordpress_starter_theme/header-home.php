@@ -34,7 +34,7 @@
       <div class="welcomeFlexer">
         <div class="welcomeContent">
           <h2><?php the_field('welcome'); ?></h2>
-          <div class="slider" data-flickity>
+          <div class="slider" data-flickity='{ "autoPlay": 4000 }'>
             <?php 
               if(have_rows('hero_slider')){
                 while(have_rows('hero_slider')){
